@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { Check, Pencil, RoundedSquare } from "radin-icon";
+import { Check, Pencil, RoundedSquare } from "@sadeghi-ehsan/radin-icon";
 import { classJoin } from "../../../utils";
 
 export const RenderMainIcon: FunctionComponent<any> = ({

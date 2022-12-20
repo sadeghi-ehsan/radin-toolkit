@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Icon } from "radin-icon";
+import { Icon } from "@sadeghi-ehsan/radin-icon";
 import { classJoin, ifEmpty, ifNotEmpty, isCallable } from "../../../utils";
 import { ICheckboxProps } from "./types";
 import { SquircleBorderSvg } from "./utils";

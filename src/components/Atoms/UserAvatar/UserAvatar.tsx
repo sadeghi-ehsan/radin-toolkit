@@ -4,7 +4,7 @@
 
 import { FunctionComponent } from "react";
 import { Avatar } from "antd";
-import { Chevron } from "radin-icon";
+import { Chevron } from "@sadeghi-ehsan/radin-icon";
 import { IUserProps } from "./types";
 import { classJoin, empty, ifEmpty, ifNotEmpty } from "../../../utils";
 import Dropdown from "../Dropdown/Dropdown";

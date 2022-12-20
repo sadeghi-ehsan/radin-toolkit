@@ -1,6 +1,6 @@
 import "jest-canvas-mock";
 import { cleanup } from "@testing-library/react";
-import { Important } from "radin-icon";
+import { Important } from "@sadeghi-ehsan/radin-icon";
 import { notification } from ".";
 
 describe("Notification ", () => {

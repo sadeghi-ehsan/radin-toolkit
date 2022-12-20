@@ -2,7 +2,7 @@
 
 import { TabPanel, ITabPanelProps, TabPane } from ".";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { BankCardAdd, Edit, ExternalLink, Eye } from "radin-icon";
+import { BankCardAdd, Edit, ExternalLink, Eye } from "@sadeghi-ehsan/radin-icon";
 
 export default {
   title: "components/Atoms/TabPanel",

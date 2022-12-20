@@ -1,5 +1,5 @@
 import { IToolsTabPanel, TabPane as SBTTabPane, TabPanel as SBTTabPanel } from "../../src";
-import { Edit, ExternalLink, Eye } from "radin-icon";
+import { Edit, ExternalLink, Eye } from "@sadeghi-ehsan/radin-icon";
 // @ts-ignore
 import icon from "../../assets/icons/bank-card-add/bank-card-add.svg";
 import { useState } from "react";

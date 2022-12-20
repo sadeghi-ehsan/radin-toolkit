@@ -1,5 +1,5 @@
 import { Modal as AntModal } from "antd";
-import { CloseRounded } from "radin-icon";
+import { CloseRounded } from "@sadeghi-ehsan/radin-icon";
 
 AntModal.defaultProps = {
   closable: true,

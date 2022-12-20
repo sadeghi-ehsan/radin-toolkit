@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { Icon, IconProps } from "radin-icon";
+import { Icon, IconProps } from "@sadeghi-ehsan/radin-icon";
 
 const ExamSvg = forwardRef<SVGElement, IconProps>(({ fill, ...restProps }, ref) => (
   <svg

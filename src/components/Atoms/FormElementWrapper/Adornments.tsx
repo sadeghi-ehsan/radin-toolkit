@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Close } from "radin-icon";
+import { Close } from "@sadeghi-ehsan/radin-icon";
 import { IAdornmentProps } from ".";
 import { classJoin, ifEmpty } from "../../../utils";
 import { Divider } from "../Divider";

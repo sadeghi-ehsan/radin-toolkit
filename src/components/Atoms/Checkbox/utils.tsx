@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { IconProps } from "radin-icon";
+import { IconProps } from "@sadeghi-ehsan/radin-icon";
 import { colors } from "../../../constants/tailwind";
 import { CheckboxVariant } from "./types";
 

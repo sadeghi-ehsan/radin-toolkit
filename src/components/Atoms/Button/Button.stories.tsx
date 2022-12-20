@@ -3,7 +3,7 @@
 import { Button, IButtonProps } from ".";
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Chevron, Envelope, Plus, PlusSquare } from "radin-icon";
+import { Chevron, Envelope, Plus, PlusSquare } from "@sadeghi-ehsan/radin-icon";
 import failIcon from "./story-book-assets/fail.lottiefile.json";
 import loadingIcon from "./story-book-assets/loading.lottiefile.json";
 import successIcon from "./story-book-assets/success.lottiefile.json";

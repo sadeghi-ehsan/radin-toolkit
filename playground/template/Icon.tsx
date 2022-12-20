@@ -1,7 +1,7 @@
-import * as Icons from "radin-icon";
+import * as Icons from "@sadeghi-ehsan/radin-icon";
 import { ucFirst } from "../../src";
-import { Bookmark, IconProps } from "radin-icon";
-import { weights } from "radin-icon/lib/components/Atoms/Icon/base/constants";
+import { Bookmark, IconProps } from "@sadeghi-ehsan/radin-icon";
+import { weights } from "@sadeghi-ehsan/radin-icon/lib/components/Atoms/Icon/base/constants";
 import { colors } from "../../src/constants/tailwind";
 import { animation, fontSize, rotateClasses } from "../../src/constants/tailwind";
 

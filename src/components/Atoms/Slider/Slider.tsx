@@ -1,6 +1,6 @@
 import { forwardRef, useEffect, useState } from "react";
 import { Slider as AntSlider } from "antd";
-import { Check, Error } from "radin-icon";
+import { Check, Error } from "@sadeghi-ehsan/radin-icon";
 import { classJoin, empty, isArray, isNumber, isString } from "../../../utils";
 import { ISliderProps, ISliderMarksType } from "./types";
 import { CompoundedComponent } from "../../../types/common";

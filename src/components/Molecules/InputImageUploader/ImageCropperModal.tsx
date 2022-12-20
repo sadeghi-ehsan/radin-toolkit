@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { CloseRounded, Refresh, RotateRight } from "radin-icon";
+import { CloseRounded, Refresh, RotateRight } from "@sadeghi-ehsan/radin-icon";
 import { Button } from "../../Atoms/Button";
 import { Modal } from "../Modal";
 import { ImageCropper } from "../../Atoms/ImageCropper";

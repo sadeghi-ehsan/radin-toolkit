@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from "react";
-import { Lock, Eye, EyeSlash } from "radin-icon";
+import { Lock, Eye, EyeSlash } from "@sadeghi-ehsan/radin-icon";
 import { ifNotEmpty } from "../../../utils";
 import { IInputPasswordProps } from "./types";
 import { Input } from "../Input";

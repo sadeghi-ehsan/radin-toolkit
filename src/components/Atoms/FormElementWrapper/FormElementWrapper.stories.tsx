@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Badge, Typography } from "../../../";
 import { IFormElWrapperProps, FormElementWrapper } from ".";
-import { Activity } from "radin-icon";
+import { Activity } from "@sadeghi-ehsan/radin-icon";
 
 export default {
   component: FormElementWrapper,

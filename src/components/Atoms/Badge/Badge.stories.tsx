@@ -1,7 +1,7 @@
 // Badge.stories.ts|tsx
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Badge } from ".";
-import { Activity } from "radin-icon";
+import { Activity } from "@sadeghi-ehsan/radin-icon";
 import { IBadgeProps } from "./types";
 
 export default {

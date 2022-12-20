@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { NotificationBox } from "./index";
 import { INotificationBoxProps } from "./types";
-import { Check, Error, Refresh, Trash } from "radin-icon";
+import { Check, Error, Refresh, Trash } from "@sadeghi-ehsan/radin-icon";
 import useState from "storybook-addon-state";
 
 export default {

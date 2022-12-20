@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Stepper } from ".";
 import { IStepperProps } from "./types";
-import { Time, TripleSquare, AddImage, Ip, BankCardAdd, Lock, Activity } from "radin-icon";
+import { Time, TripleSquare, AddImage, Ip, BankCardAdd, Lock, Activity } from "@sadeghi-ehsan/radin-icon";
 
 export default {
   title: "components/Organisms/Stepper",

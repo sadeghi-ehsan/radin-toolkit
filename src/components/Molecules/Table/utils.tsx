@@ -1,5 +1,5 @@
 import React, { useState, FunctionComponent } from "react";
-import { More, Chevron, DoubleArrow, FilterSquare } from "radin-icon";
+import { More, Chevron, DoubleArrow, FilterSquare } from "@sadeghi-ehsan/radin-icon";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { TableComponents } from "rc-table/lib/interface";
 import {

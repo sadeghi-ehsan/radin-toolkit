@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { DatePicker } from "./index";
 import { IDatePickerProps } from "./types";
 import { Button } from "../../../index";
-import { BankCardAdd } from "radin-icon";
+import { BankCardAdd } from "@sadeghi-ehsan/radin-icon";
 import { toJalaliDay } from "../../../utils";
 import useState from "storybook-addon-state";
 

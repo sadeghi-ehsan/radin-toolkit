@@ -1,5 +1,5 @@
 import { FunctionComponent, useCallback, useState } from "react";
-import { Close, Check, Trash, Edit, Replace, Plus } from "radin-icon";
+import { Close, Check, Trash, Edit, Replace, Plus } from "@sadeghi-ehsan/radin-icon";
 import { FormElementWrapper, IFormElWrapperProps } from "../../Atoms/FormElementWrapper";
 import { classJoin, empty, extractFormElementProps, filterObj, isCallable } from "../../../utils";
 import { IInputImageUploaderProps } from "./types";

@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Badge, Popover, Typography } from "../../../";
 import { IInputProps, Input } from ".";
 import useState from "storybook-addon-state";
-import { Activity, ExternalLink } from "radin-icon";
+import { Activity, ExternalLink } from "@sadeghi-ehsan/radin-icon";
 import { classJoin } from "../../../utils";
 
 export default {

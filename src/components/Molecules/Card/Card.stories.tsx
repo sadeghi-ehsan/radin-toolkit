@@ -4,7 +4,7 @@ import { Badge } from "../../Atoms/Badge";
 import { Card } from ".";
 import { ICardProps } from "./types";
 import { Typography } from "../../Atoms/Typography";
-import { Activity, Plus, Error } from "radin-icon";
+import { Activity, Plus, Error } from "@sadeghi-ehsan/radin-icon";
 import { Input } from "../../Molecules/Input";
 import { Button } from "../../Atoms/Button";
 import { Divider } from "../../Atoms/Divider";

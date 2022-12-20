@@ -1,5 +1,5 @@
 import { notification as antdNotification } from "antd";
-import { Check, Close, RoundedSquare } from "radin-icon";
+import { Check, Close, RoundedSquare } from "@sadeghi-ehsan/radin-icon";
 import { Button } from "../../..";
 import { classJoin, randomStr, toJalaliDay } from "../../../utils";
 import { Badge } from "../Badge";

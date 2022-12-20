@@ -1,5 +1,5 @@
 import { useState, KeyboardEvent, useEffect, ClipboardEvent, forwardRef, useRef } from "react";
-import { Ip } from "radin-icon";
+import { Ip } from "@sadeghi-ehsan/radin-icon";
 import {
   classJoin,
   empty,

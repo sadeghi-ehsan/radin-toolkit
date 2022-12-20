@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { CurvedMinus, CurvedPlus, Chevron } from "radin-icon";
+import { CurvedMinus, CurvedPlus, Chevron } from "@sadeghi-ehsan/radin-icon";
 import { IInputNumberProps } from "./types";
 import { Input } from "../Input";
 import { Button } from "../../Atoms/Button";

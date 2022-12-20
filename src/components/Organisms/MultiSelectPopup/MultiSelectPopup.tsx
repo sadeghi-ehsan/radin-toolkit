@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useMemo, useRef, useState } from "react";
 import List from "rc-virtual-list";
 import { useGesture } from "@use-gesture/react";
-import { WatchlistAdd, Eye, Increase, Close, FilterSquare, Search } from "radin-icon";
+import { WatchlistAdd, Eye, Increase, Close, FilterSquare, Search } from "@sadeghi-ehsan/radin-icon";
 import ParentSelectPopup from "./components/ParentSelectPopup";
 import { classJoin } from "../../../utils";
 import { Button } from "../../Atoms/Button";

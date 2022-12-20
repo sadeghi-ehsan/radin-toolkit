@@ -1,5 +1,5 @@
 import { forwardRef, useRef, useState } from "react";
-import { Chevron } from "radin-icon";
+import { Chevron } from "@sadeghi-ehsan/radin-icon";
 import { ICollapseProps } from "./types";
 import { CLOSE, OPEN } from "./utils";
 

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import { forwardRef } from "react";
 import dayjs from "dayjs";
-import { Calendar } from "radin-icon";
+import { Calendar } from "@sadeghi-ehsan/radin-icon";
 import { IInputDatePickerProps } from "./types";
 import { CompoundedComponent } from "../../../types/common";
 import { classJoin, empty } from "../../../utils";

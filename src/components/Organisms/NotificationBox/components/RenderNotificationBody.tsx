@@ -1,4 +1,4 @@
-import { Check, Chevron, RoundedSquare } from "radin-icon";
+import { Check, Chevron, RoundedSquare } from "@sadeghi-ehsan/radin-icon";
 import { FunctionComponent } from "react";
 import { Badge } from "../../../Atoms/Badge";
 import { classJoin, toJalaliDay } from "../../../../utils";

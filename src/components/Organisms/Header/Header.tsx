@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import { Envelope, Logout, PersonSquare } from "radin-icon";
+import { Envelope, Logout, PersonSquare } from "@sadeghi-ehsan/radin-icon";
 import { classJoin, toJalaliDay } from "../../../utils";
 import { IHeaderProps } from "./types";
 import { Divider } from "../../Atoms/Divider";

@@ -2,7 +2,7 @@
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { FunctionComponent } from "react";
-import { BankCardAdd } from "radin-icon";
+import { BankCardAdd } from "@sadeghi-ehsan/radin-icon";
 import { notification } from ".";
 import { Button } from "../Button";
 import { INotificationProps } from "./types";

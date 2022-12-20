@@ -1,6 +1,6 @@
 // Table.stories.ts|tsx
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Trash, Ban, Calendar, ExpirationDate } from "radin-icon";
+import { Trash, Ban, Calendar, ExpirationDate } from "@sadeghi-ehsan/radin-icon";
 import { CustomColumnType, ITableProps } from "./types";
 import { commaSeparator } from "../../../utils/helpers";
 import { Table } from ".";

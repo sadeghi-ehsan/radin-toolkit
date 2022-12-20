@@ -1,5 +1,5 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
-import { ExternalLink } from "radin-icon";
+import { ExternalLink } from "@sadeghi-ehsan/radin-icon";
 import { ITextareaProps, TextareaResizeValues } from "./types";
 import { FormElementWrapper } from "../../Atoms/FormElementWrapper";
 import { classJoin, extractFormElementProps, filterObj } from "../../../utils";

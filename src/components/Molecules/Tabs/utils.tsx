@@ -1,5 +1,5 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
-import { Star, Notification, Close, Export, Import, More, NotificationUser } from "radin-icon";
+import { Star, Notification, Close, Export, Import, More, NotificationUser } from "@sadeghi-ehsan/radin-icon";
 import { INotice, ITabsPaneProps, ITabTitle } from "./types";
 import { classJoin } from "../../../utils";
 import Popover from "../../Atoms/Popover/Popover";

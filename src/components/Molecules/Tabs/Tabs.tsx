@@ -1,5 +1,5 @@
 import { createElement, FunctionComponent, ReactNode, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Chevron, Plus } from "radin-icon";
+import { Chevron, Plus } from "@sadeghi-ehsan/radin-icon";
 import { IScrollButton, ITabsPaneProps, ITabsProps } from "./types";
 import { classJoin } from "../../../utils";
 import Popover from "../../Atoms/Popover/Popover";

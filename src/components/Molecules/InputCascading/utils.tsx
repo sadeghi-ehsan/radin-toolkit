@@ -1,4 +1,4 @@
-import { Chevron } from "radin-icon";
+import { Chevron } from "@sadeghi-ehsan/radin-icon";
 import { components, ControlProps } from "react-select";
 import { classJoin, ifNotEmpty } from "../../../utils";
 import { Input } from "../Input";

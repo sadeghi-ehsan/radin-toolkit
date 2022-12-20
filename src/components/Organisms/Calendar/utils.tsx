@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Chevron } from "radin-icon";
+import { Chevron } from "@sadeghi-ehsan/radin-icon";
 
 export const RenderHeader = ({
   header

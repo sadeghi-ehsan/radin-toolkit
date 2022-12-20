@@ -9,7 +9,7 @@ import { AsyncPaginate } from "react-select-async-paginate";
 import ReactSelect, { GroupBase, Props, CSSObjectWithLabel, components as selectComponents } from "react-select";
 import { ThemeConfig } from "react-select/dist/declarations/src/theme";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import { Close } from "radin-icon";
+import { Close } from "@sadeghi-ehsan/radin-icon";
 import { colors } from "../../../constants/tailwind";
 import { classJoin, empty, filterObj, ifEmpty, isArray, useDrag, usePreventBodyScroll } from "../../../utils";
 

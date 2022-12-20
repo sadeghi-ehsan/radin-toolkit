@@ -1,8 +1,8 @@
 // Icon.stories.ts|tsx
 
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import * as Icons from "radin-icon";
-import { Activity, Icon, IconProps, IconContext } from "radin-icon";
+import * as Icons from "@sadeghi-ehsan/radin-icon";
+import { Activity, Icon, IconProps, IconContext } from "@sadeghi-ehsan/radin-icon";
 import { forwardRef } from "react";
 
 export default {

@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { Upload } from "antd";
 
-import { AddImage, Error } from "radin-icon";
+import { AddImage, Error } from "@sadeghi-ehsan/radin-icon";
 import { classJoin, empty, isCallable, modifyReactChildren } from "../../../utils";
 import { IFilePickerProps } from "./types";
 

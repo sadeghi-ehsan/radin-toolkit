@@ -1,4 +1,4 @@
-import { Check, Envelope } from "radin-icon";
+import { Check, Envelope } from "@sadeghi-ehsan/radin-icon";
 import { FunctionComponent } from "react";
 import { Divider } from "../../../Atoms/Divider";
 import { classJoin } from "../../../../utils";

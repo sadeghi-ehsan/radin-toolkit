@@ -1,6 +1,6 @@
 import { TabsPane as SBTTabPane, Tabs as SBTTab, INotice } from "../../src";
 import { useEffect, useState } from "react";
-import { Calendar } from "radin-icon";
+import { Calendar } from "@sadeghi-ehsan/radin-icon";
 import { Button, Input } from "antd";
 
 const tabs = [
