@@ -1,0 +1,32 @@
+export declare const textVariants: {
+    heading1: string;
+    heading2: string;
+    heading3: string;
+    heading4: string;
+    heading5: string;
+    heading6: string;
+    heading7: string;
+    heading8: string;
+    body1: string;
+    body2: string;
+    body3: string;
+    body4: string;
+    subtitle1: string;
+    subtitle2: string;
+    subtitle3: string;
+    button1: string;
+    button2: string;
+    button3: string;
+    caption1: string;
+    caption2: string;
+    overline: string;
+};
+export declare const fontWeights: {
+    thin: string;
+    light: string;
+    regular: string;
+    medium: string;
+    bold: string;
+    heavy: string;
+    fat: string;
+};

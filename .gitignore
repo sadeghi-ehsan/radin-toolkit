@@ -46,8 +46,7 @@ typings/
 .yarn-integrity
 
 # generate output
-dist
-lib
+
 es
 
 .DS_Store

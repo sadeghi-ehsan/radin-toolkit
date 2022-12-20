@@ -1,0 +1,11 @@
+import { colors, fontSize, rotate, animation, width, height, textColors, bgColors, rotateClasses, fontSizeName } from "../constants/tailwind";
+export declare type TailwindColors = keyof typeof colors;
+export declare type TailwindTextColors = keyof typeof textColors;
+export declare type TailwindBgColors = keyof typeof bgColors;
+export declare type TailwindFontSize = keyof typeof fontSize;
+export declare type TailwindFontSizeName = keyof typeof fontSizeName;
+export declare type TailwindRotate = keyof typeof rotate;
+export declare type TailwindRotateClasses = keyof typeof rotateClasses;
+export declare type TailwindAnimation = keyof typeof animation;
+export declare type TailwindWidth = keyof typeof width;
+export declare type TailwindHeight = keyof typeof height;

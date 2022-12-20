@@ -1,0 +1,21 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Check, Chevron, RoundedSquare } from "@sadeghi-ehsan/radin-icon";
+import { Badge } from "../../../Atoms/Badge";
+import { classJoin, toJalaliDay } from "../../../../utils";
+import { Button } from "../../../Atoms/Button";
+const NotificationBody = ({ notificationList, notificationButtonLabels, emptyListMessage, handleExpand, handleClickConfirm, handleClickCancel, handleCollapse }) => (_jsx("div", { children: notificationList?.length > 0 ? (notificationList?.map((item, index) => (_jsx("div", { className: classJoin([
+            item.read
+                ? notificationList[index + 1]?.read
+                    ? "border-b border-solid border-primary-border last:border-b-0"
+                    : "bg-card-bg"
+                : "bg-appearing/20 rounded mb-1",
+            ""
+        ]), children: _jsxs("div", { className: classJoin(["flex flex-col px-3 pt-3.5 pb-1 cursor-pointer"]), onClick: () => handleExpand(item.id), children: [_jsxs("div", { className: "flex flex-row items-start", children: [_jsxs("div", { className: "relative", children: [_jsx(RoundedSquare, { weight: "fill", size: "3xl", color: "light-text", className: "opacity-10" }), item?.read || (_jsx("div", { className: "absolute -top-1.5", children: _jsx(Badge, { type: "state", size: ".9xs", className: "!bg-light" }) })), _jsx("div", { className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ", children: item?.iconType })] }), _jsxs("div", { className: classJoin([!item.isCollapsed ? "mb-4" : "overflow-hidden", "flex flex-col flex-1 pr-2.5  "]), children: [_jsx("div", { className: "font-bold text-xs text-label", children: item?.title }), _jsx("div", { className: classJoin([
+                                        item.read ? "text-idle" : "text-label",
+                                        item.isCollapsed ? "truncate  " : "",
+                                        "text-xs"
+                                    ]), children: item.description })] })] }), _jsxs("div", { className: " flex flex-row items-center justify-between ", children: [_jsx("div", { className: "text-idle text-.9xs ", children: item.dateTime || toJalaliDay(new Date()).format("YYYY/MM/DD [ , ساعت] HH:mm") }), _jsx("div", { className: "flex flex-row items-center ", children: item.isCollapsed || (_jsxs(_Fragment, { children: [item?.hasConfirm || (_jsxs(_Fragment, { children: [_jsx(Button, { size: "sm", onClick: e => handleClickConfirm(e, item.id), className: "!min-w-0 w-14 !bg-filled-bg", children: notificationButtonLabels.submit }), _jsx(Button, { size: "sm", variant: "text", onClick: e => handleClickCancel(e, item.id), className: "!min-w-0 w-14", children: notificationButtonLabels.cancel })] })), _jsxs("div", { className: "relative cursor-pointer hover:text-primary", onClick: e => handleCollapse(e, item.id), children: [_jsx(RoundedSquare, { weight: "fill", size: "xl", color: "idle", className: "opacity-40" }), _jsx(Chevron, { size: "xs", rotate: "90", className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " })] })] })) })] })] }) }, item.id)))) : (
+    // {/* ---------------------------------- No Notification ----------------------------------*/}
+    _jsx("div", { className: "bg-card-bg bg-appearing/20 rounded mb-1", children: _jsx("div", { className: classJoin(["flex flex-col p-3 cursor-pointer"]), children: _jsxs("div", { className: "flex flex-row items-center", children: [_jsxs("div", { className: "relative", children: [_jsx(RoundedSquare, { weight: "fill", size: "3xl", color: "light-text", className: "opacity-10" }), _jsx("div", { className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  ", children: _jsx(Check, { color: "idle", size: "lg" }) })] }), _jsx("div", { className: classJoin(["overflow-hidden", "flex flex-col flex-1 pr-2.5  "]), children: _jsx("div", { className: classJoin(["text-label", "text-xs"]), children: emptyListMessage }) })] }) }) })) }));
+export default NotificationBody;
+//# sourceMappingURL=RenderNotificationBody.js.map

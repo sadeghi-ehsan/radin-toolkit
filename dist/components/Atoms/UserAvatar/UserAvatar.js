@@ -1,0 +1,13 @@
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
+import { Avatar } from "antd";
+import { Chevron } from "@sadeghi-ehsan/radin-icon";
+import { classJoin, empty, ifEmpty, ifNotEmpty } from "../../../utils";
+import Dropdown from "../Dropdown/Dropdown";
+export const UserAvatar = ({ firstName, lastName, img, roleList, role, users, maxCount, allUsersCount, className, ...restProps }) => users ? (_jsxs("div", { className: classJoin(["flex flex-row-reverse justify-end", className]), children: [(users.length > maxCount || allUsersCount) && (_jsxs("span", { className: "light-text mt-1 text-1.5x relative content-center grid", children: [allUsersCount - maxCount || users.length - maxCount, "+"] })), users?.slice(0, maxCount)?.map(eachUser => (_jsxs("div", { className: classJoin([
+                `text-xs rounded-full text-center relative border-card-bg border-3.5 content-center grid w-8 h-8 z-10 -mr-3 pr-1.5 last:pr-0`,
+                ifEmpty(eachUser?.img, "bg-primary-label"),
+                ifNotEmpty(eachUser?.img, "bg-primary-label")
+            ]), children: [!eachUser?.img && (_jsx("span", { className: "text-dark-text", children: eachUser?.firstName?.charAt(0) || eachUser?.lastName?.charAt(0) })), ifNotEmpty(eachUser?.img) && _jsx("img", { className: "rounded-full", src: eachUser?.img, alt: "avatar" })] }, `${eachUser?.firstName}-${eachUser?.lastName}`)))] })) : (_jsxs("div", { className: classJoin(["flex", className]), children: [_jsx(Avatar, { ...restProps, className: classJoin([ifEmpty(img, "bg-primary-label")]), src: img, size: 40, children: empty(img) && _jsx("span", { className: "text-dark-text", children: lastName?.charAt(0) || firstName?.charAt(0) }) }), _jsxs("div", { className: "pr-2 light-text text-sm content-center grid", children: [_jsxs("span", { children: [firstName, " ", lastName] }), role && (_jsxs("div", { children: [roleList && (_jsx(Dropdown, { overlay: roleList, trigger: ["click"], children: _jsxs("button", { type: "button", className: "triggerButton text-idle text-xs flex", children: [role, _jsx(Chevron, { className: "pr-1 mr-1 mt-1", size: ".8xs", rotate: "90", flip: "vertical" })] }) })), !roleList && role && _jsxs("div", { className: "text-idle text-xs", children: [" ", role] })] }))] })] }));
+UserAvatar.defaultProps = { maxCount: 3, firstName: "", lastName: "", users: null };
+export default UserAvatar;
+//# sourceMappingURL=UserAvatar.js.map
