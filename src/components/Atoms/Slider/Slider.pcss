@@ -1,0 +1,107 @@
+.sbt-slider {
+  @apply ~"h-3.5" mt-0 mr-10 flex-1;
+
+  &.ant-slider-rtl .ant-slider-mark-text {
+    direction: ltr;
+  }
+
+  .ant-slider-handle {
+    @apply bg-primary border-3 border-solid border-card-bg w-4 h-4 focus:shadow-none;
+
+    .ant-slider-tooltip {
+      .ant-tooltip-inner {
+        @apply bg-primary-hover px-6 ~"py-0.5" ~"text-1.5xs" shadow-none rounded min-h-max;
+      }
+
+      .ant-tooltip-arrow-content {
+        @apply bg-primary-hover;
+      }
+    }
+  }
+
+  .ant-slider-handle-dragging {
+    @apply focus:border-card-bg;
+  }
+
+  .ant-slider-track {
+    @apply bg-primary ~"h-1.5" shadow-progress shadow-primary/[0.8] rounded-none;
+  }
+
+  .ant-slider-rail {
+    @apply bg-appearing rounded-full ~"h-1.5";
+    /* the colored static part before slide on its right */
+
+    &:before {
+      @apply content-[''] ~"w-10.5" z-0 bg-primary shadow-progress shadow-primary/[0.8] rounded-br-full rounded-tr-full absolute top-0 -right-10 ~"h-1.5";
+    }
+  }
+
+  &.range {
+    .ant-slider-rail:before {
+      @apply bg-appearing shadow-none;
+    }
+  }
+
+  .ant-slider-step {
+    @apply ~"h-1.5" rounded-full;
+  }
+
+  .ant-slider-mark {
+    @apply ~"top-3.25";
+
+    .ant-slider-mark-text {
+      @apply text-right transform-none !important;
+
+      &:first-of-type div div:last-child {
+        transform: translateX(-20%) !important;
+      }
+
+      &:last-of-type div div:last-child {
+        transform: translateX(-75%) !important;
+      }
+    }
+  }
+
+  &:hover {
+    .ant-slider-track {
+      @apply bg-primary;
+    }
+
+    .ant-slider-rail {
+      @apply bg-appearing;
+    }
+  }
+
+  &.error {
+    .ant-slider-handle {
+      @apply bg-error border-card-bg;
+
+      .ant-slider-tooltip {
+        .ant-tooltip-inner,
+        .ant-tooltip-arrow-content {
+          @apply bg-error;
+        }
+      }
+    }
+
+    .ant-slider-track {
+      @apply bg-error shadow-error/[0.8];
+    }
+
+    .ant-slider-rail:before {
+      @apply bg-error shadow-error/[0.8];
+    }
+  }
+
+  /* both error and range */
+
+  &.error.range {
+    .ant-slider-rail:before {
+      @apply bg-appearing  shadow-none;
+    }
+  }
+
+  .ant-slider-dot {
+    @apply hidden;
+  }
+}

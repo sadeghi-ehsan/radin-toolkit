@@ -1,0 +1,80 @@
+.ant-modal-root {
+  .ant-modal-mask {
+    @apply backdrop-blur-sm;
+
+    background-color: #08070773;
+  }
+
+  /* ------------------------------ Normal Modal ------------------------------ */
+  .ant-modal {
+    .ant-modal-content {
+      @apply rounded-xxl bg-card-bg backdrop-blur-md;
+      box-shadow: 0px 36px 99px #0000004d;
+      border: 1px solid #0a84ff !important;
+
+      .ant-modal-close .ant-modal-close-x {
+        @apply flex justify-center items-center mt-4 ml-3;
+      }
+
+      .ant-modal-header {
+        @apply rounded-t-xxl border-b-card-border !bg-transparent !px-8 !pt-8 !pb-6;
+
+        .ant-modal-title {
+          @apply pl-8 text-primary-label text-lg;
+        }
+      }
+
+      .ant-modal-footer {
+        @apply border-t-card-border !p-8;
+      }
+    }
+    /* ------------------------------ Confirm Modal ----------------------------- */
+    &.ant-modal-confirm {
+      .ant-modal-content {
+        @apply rounded-xxl;
+        box-shadow: 0px 36px 99px #0000004d;
+
+        .ant-modal-body {
+          @apply bg-card-bg rounded-xxl border border-card-border !p-6;
+
+          .ant-modal-confirm-body {
+            .anticon {
+              @apply block !float-none mb-6 !mr-0 !ml-0;
+            }
+            .ant-modal-confirm-title {
+              @apply text-center text-primary-label !text-base !font-medium;
+            }
+            .ant-modal-confirm-content {
+              @apply text-center text-light-text text-sm font-light !mr-0 !ml-0;
+            }
+          }
+
+          .ant-modal-confirm-btns {
+            @apply w-full flex justify-around items-center !float-none space-x-4 rtl:space-x-reverse px-4;
+
+            .ant-btn {
+              @apply rounded-llg w-1/2;
+
+              &.ant-btn-primary {
+                @apply !shadow-none hover:border-transparent focus:border-light-text disabled:text-opacity-20 bg-primary hover:bg-primary-hover focus:bg-primary-hover
+            disabled:bg-primary disabled:bg-opacity-10 disabled:border-transparent;
+              }
+
+              &.ant-btn-default {
+                @apply !shadow-none;
+
+                &:not(.ant-btn-dangerous) {
+                  @apply !border-none;
+                }
+
+                &.ant-btn-dangerous {
+                  @apply text-white bg-transparent hover:bg-opacity-40 disabled:bg-transparent disabled:border-opacity-20 border-terminate hover:bg-terminate-hover disabled:text-opacity-20;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

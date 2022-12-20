@@ -1,0 +1,15 @@
+.sbt-notification {
+  @apply py-4 pr-4 pl-6 rounded-xxl backdrop-blur-md overflow-visible ~"bg-light/70" shadow-notification;
+
+  .ant-notification-notice-message {
+    @apply !pl-0 ~"!mb-2.5";
+  }
+
+  .ant-notification-notice-close {
+    @apply absolute -top-1 -left-1 opacity-0 transition-opacity;
+  }
+
+  &:hover .ant-notification-notice-close {
+    @apply opacity-100;
+  }
+}

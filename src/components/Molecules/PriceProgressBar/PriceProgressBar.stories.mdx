@@ -1,0 +1,47 @@
+<!-- PriceProgressBar.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+import {PriceProgressBar} from './PriceProgressBar';
+
+<Meta title="COMPONENTS/Molecules/PriceProgressBar/Docs" />
+
+
+## شماره تسک در جیرا:
+
+## توضیحات :
+
+این کامپوننت سه مقدار به همراه یک نوار نمایش میدهد.
+
+## props ها و قابلیت ها:
+
+- ### count?: number
+این خصیصه برای نشان دادن مقدار سهم خریداری یه فروخته شده میباشد که در بالای نوار وضعیت قرار میگیرد و مقدار دهی آن اختیاری میباشد.
+
+نحوه استفاده:
+```jsx
+<PriceProgressBar count={1748} {...restProps} />
+```
+
+- ### volume?: number
+این خصیصه برای نشان دادن حجم سهم خریداری یه فروخته شده میباشد که در بالای نوار وضعیت قرار میگیرد و مقدار دهی آن اختیاری میباشد.
+
+نحوه استفاده:
+```jsx
+<PriceProgressBar volume={160372685} {...restProps} />
+```
+
+- ### percentage: number
+این مقدار درصدی مقدار پر شدن نپار وضعیت را مشخص مینماید و در زیر آن نمایش داده میشود و مقدار دهی آن اجباری میباشد.
+
+```jsx
+<PriceProgressBar percentage={78.04} {...restProps} />
+```
+
+- ### direction?:‌ "rtl" | "ltr" - default: "rtl"
+جهت و رنگ نوار وضعیت را مشخص میکند و به صورت پیشفرض بر روی **rtl** قرار دارد.  
+اگر مقدار **rtl** داشته باشد کامپوننت به رنگ قرمز *(prompt)* و اگر مقدار **ltr** بگیرد کامپوننت به رنگ سبر *(success)* نمایش داده میشود.  
+مقدار دهی این خصیصه اختیاری میباشد. 
+
+```jsx
+<PriceProgressBar direction="rtl" {...restProps} />
+```

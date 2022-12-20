@@ -1,0 +1,142 @@
+.sbt-btn {
+  /*********************************************************************
+  ************** Implementing Different themes of button ***************
+  *********************************************************************/
+
+  &.sbt-theme {
+    &-primary {
+      @apply bg-primary hover:bg-primary-hover focus:bg-primary-hover
+            disabled:bg-primary disabled:bg-opacity-10 disabled:border-transparent;
+
+      &.sbt-variant-outline {
+        @apply border-primary focus:bg-primary-hover disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-text {
+        @apply hover:text-primary focus:text-primary-hover;
+      }
+
+      &.sbt-variant-toggle {
+        @apply bg-primary hover:bg-dark-text focus:bg-primary 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+      &.sbt-variant-unToggle {
+        @apply bg-dark-text  text-disabled hover:text-idle 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+    }
+
+    &-terminate {
+      @apply bg-terminate hover:bg-terminate-hover focus:bg-terminate-hover
+      disabled:bg-terminate disabled:bg-opacity-10 disabled:border-transparent;
+
+      &.sbt-variant-outline {
+        @apply border-terminate focus:bg-terminate-hover disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-text {
+        @apply hover:text-terminate focus:text-terminate-hover;
+      }
+      &.sbt-variant-toggle {
+        @apply bg-terminate hover:bg-dark-text focus:bg-terminate-hover
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+      &.sbt-variant-unToggle {
+        @apply bg-dark-text  text-disabled hover:text-idle 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+    }
+
+    &-error {
+      @apply bg-error hover:bg-error-hover focus:bg-error-hover
+      disabled:bg-error disabled:bg-opacity-10 disabled:border-transparent;
+
+      &.sbt-variant-outline {
+        @apply border-error focus:bg-error-hover disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-text {
+        @apply hover:text-error focus:text-error-hover;
+      }
+      &.sbt-variant-toggle {
+        @apply bg-error hover:bg-dark-text focus:bg-error-hover
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+      &.sbt-variant-unToggle {
+        @apply bg-dark-text  text-disabled hover:text-idle 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+    }
+
+    &-success {
+      @apply bg-success hover:bg-success-hover focus:bg-success-hover
+      disabled:bg-success disabled:bg-opacity-10 disabled:border-transparent;
+
+      &.sbt-variant-default {
+        @apply text-card-bg focus:text-light-text disabled:text-light-text disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-outline {
+        @apply border-success focus:bg-success-hover focus:text-card-bg disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-text {
+        @apply hover:text-success focus:text-success-hover;
+      }
+      &.sbt-variant-toggle {
+        @apply bg-success hover:bg-dark-text focus:bg-success-hover
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+      &.sbt-variant-unToggle {
+        @apply bg-dark-text  text-disabled hover:text-idle 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+    }
+
+    &-warning {
+      @apply bg-warning hover:bg-warning-hover focus:bg-warning-hover
+      disabled:bg-warning disabled:bg-opacity-10 disabled:border-transparent;
+
+      &.sbt-variant-default {
+        @apply text-card-bg focus:text-light-text disabled:text-light-text disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-outline {
+        @apply border-warning focus:bg-warning-hover focus:text-card-bg disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-text {
+        @apply hover:text-warning focus:text-warning-hover;
+      }
+      &.sbt-variant-toggle {
+        @apply bg-warning hover:bg-dark-text focus:bg-warning-hover
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+      &.sbt-variant-unToggle {
+        @apply bg-dark-text  text-disabled hover:text-idle 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+    }
+
+    &-dark {
+      @apply bg-dark-text hover:bg-dark-text/60 focus:bg-dark-text-hover
+      disabled:bg-dark-text disabled:bg-opacity-10 disabled:border-transparent;
+
+      &.sbt-variant-outline {
+        @apply border-dark-text focus:bg-dark-text-hover disabled:text-opacity-20;
+      }
+
+      &.sbt-variant-text {
+        @apply hover:text-dark-text focus:text-dark-text-hover;
+      }
+      &.sbt-variant-toggle {
+        @apply bg-dark hover:bg-dark-text focus:bg-dark-text-hover
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+      &.sbt-variant-unToggle {
+        @apply bg-dark-text  text-disabled hover:text-idle 
+            disabled:!bg-dark-text disabled:!text-disabled disabled:opacity-30;
+      }
+    }
+  }
+}

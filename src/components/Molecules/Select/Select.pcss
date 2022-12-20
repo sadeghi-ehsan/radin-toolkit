@@ -1,0 +1,73 @@
+.sbt-select {
+  @apply text-light-text;
+
+  [class*="control"] {
+    @apply px-4 h-full;
+
+    [class*="ValueContainer"] {
+      [class*="placeholder"] {
+        @apply text-idle;
+      }
+
+      [class*="singleValue"] {
+        @apply text-light-text;
+      }
+
+      [class*="Input"] {
+        @apply text-light-text;
+
+        input {
+          @apply cursor-default w-full;
+        }
+      }
+    }
+
+    [class*="IndicatorsContainer"] {
+      [class*="indicatorContainer"] {
+        @apply p-0 transition-sbt;
+      }
+    }
+  }
+
+  &-Menu {
+    @apply border border-t-0 border-solid border-primary rounded-xl rounded-t-none overflow-hidden -left-px text-light-text;
+    width: calc(100% + 2px) !important;
+
+    .select__menu-list {
+      @apply pl-2;
+
+      [class*="option"] {
+        @apply transition-sbt cursor-pointer rounded p-2 hover:bg-primary hover:bg-opacity-10;
+      }
+
+      &::-webkit-scrollbar-track {
+        @apply bg-card-border rounded-full;
+      }
+
+      &::-webkit-scrollbar {
+        @apply ~"w-1.5";
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @apply bg-primary-focus rounded-full transition-sbt hover:bg-primary-hover;
+      }
+    }
+
+    .react-horizontal-scrolling-menu--wrapper {
+      @apply relative;
+
+      &:after {
+        content: "";
+        @apply absolute left-0 top-0 bottom-0 w-9 bg-gradient-to-r from-card-bg;
+      }
+
+      .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+        @apply hidden;
+      }
+      .react-horizontal-scrolling-menu--scroll-container {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    }
+  }
+}

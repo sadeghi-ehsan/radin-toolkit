@@ -1,0 +1,54 @@
+<!-- Skeleton.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+import {Skeleton} from './Skeleton';
+
+<Meta title="COMPONENTS/Atoms/Skeleton/Docs" />
+
+
+## شماره تسک در جیرا:
+
+## توضیحات :
+
+این کامپوننت، پیش نمایشی از مکان مقادیری که نیازمند داده هستند را در زمان بارگیری اطلاعات نشان میدهد.
+به صورت پیش فرض، ** rounded ** روی ** sm **، عرض روی ** full ** و طول روی ** 5 ** قرار دارد.
+
+## props ها و قابلیت ها:
+
+- ### rounded?: "none" | "full" | "sm" | "xxl"
+انحنای زوایای کامپوننت را مشخص میکند و به طور پیشفرض بر روی ** "sm" ** قرار دارد.
+مقادیر قابل قبول برای این پراپس "none" | "full" | "sm" | "xxl" میباشد.
+
+نحوه استفاده:
+```jsx
+<Skeleton rounded="xxl" />
+<Skeleton rounded="full" />
+```
+
+- ### width?: TailwindWidth
+عرض کامپوننت را مشخص میکند.
+دارای مقدار پیشفرض ** "full" ** میباشد.
+
+نحوه استفاده:
+```jsx
+<Skeleton width="10" />
+```
+
+- ### height?: TailwindHeight
+ارتفاع کامپوننت را مشخص میکند.
+دارای مقدار پیشفرض ** "5" ** میباشد.
+
+```jsx
+<Skeleton height="10" />
+```
+
+- ### animation?: "none" | "default" | "pulse" | "pulse-fast" | "pulse-slow"
+نوع انیمیشن کامپوننت را مشخص میکند.
+دارای مقدار پیشفرض ** "pulse" ** میباشد.
+
+** "default" ** انیمیشنی است که توسط واحد طراحی ارايه شده است و در اصل از پکیج
+https://github.com/dvtng/react-loading-skeleton
+کپی برداری شده است
+```jsx
+<Skeleton animation="pulse-fast" />
+```

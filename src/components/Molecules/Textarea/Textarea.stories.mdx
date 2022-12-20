@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Molecules/Textarea/Docs" />
+
+
+## شماره تسک در جیرا:
+
+
+## توضیحات :
+
+این کامپوننت برای اینپوت چند خطی به کار میرود و تمامی پراپس های  textarea را پیاده سازی میکند
+
+
+## props ها و قابلیت ها:
+
+- **value** مقدار کامپوننت را مشخص میکند
+- **resize?: TextareaResizeValues** تعیین میکند در صورت باز بودن محدوده نمایش را بتوان جمع کرد یا گسترش داد و به صورت پیشفرض برروی none قرار دارد  
+    اگر بخواهیم برروی محور x ریسایز داشته باشیم باید مقدار پراپس block را برابر false قرار دهیم.  
+    مقادیر قابل قبول: both | x | y | none
+- **rows** تعداد سطر هایی که بدون اسکرول می توان هنگام باز بودن کامپوننت دید.  
+
+- بقیه ی پراپس های textarea و formElementWrapper به غیر از startAdornment | clearable | allowClear | onClear | verified | disabled | preserveErrorBox | endLabelAdornment

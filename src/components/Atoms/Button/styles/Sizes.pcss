@@ -1,0 +1,51 @@
+.sbt-btn {
+  /*********************************************************************
+       ************* Implementing Different sizes of button **************
+       *********************************************************************/
+
+  &.sbt-size {
+    &-sm {
+      @apply h-7 p-2 text-xs;
+
+      &.sbt-btn-min-w {
+        @apply min-w-24;
+      }
+      &-icon {
+        @apply ~" p-0.75";
+      }
+    }
+
+    &-md {
+      @apply ~"h-8.5" ~"p-2" text-sm;
+
+      &.sbt-btn-min-w {
+        @apply min-w-28;
+      }
+      &-icon {
+        @apply ~"p-1.2";
+      }
+    }
+
+    &-lg {
+      @apply ~"h-10.5" ~"p-3.25";
+
+      &.sbt-btn-min-w {
+        @apply min-w-36;
+      }
+      &-icon {
+        @apply ~"p-2.4";
+      }
+    }
+
+    &-xl {
+      @apply h-16 ~"p-5.5";
+
+      &.sbt-btn-min-w {
+        @apply min-w-52;
+      }
+      &-icon {
+        @apply ~"p-5";
+      }
+    }
+  }
+}

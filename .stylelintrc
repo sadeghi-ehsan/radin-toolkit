@@ -1,0 +1,12 @@
+{
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "indentation": 2,
+    "unit-allowed-list": ["em", "rem", "px", "%"],
+    "order/properties-order": ["width", "height"],
+    "order/properties-alphabetical-order": null,
+    "unit-case": "lower",
+    "property-case": "lower",
+    "string-quotes": "single"
+  }
+}

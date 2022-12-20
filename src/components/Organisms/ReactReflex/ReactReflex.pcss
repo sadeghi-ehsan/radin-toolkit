@@ -1,0 +1,145 @@
+:root {
+  --reflex-splitter-handle-color: #393f59;
+}
+
+body.reflex-col-resize {
+  @apply cursor-col-resize;
+}
+
+body.reflex-row-resize {
+  @apply cursor-row-resize;
+}
+
+.reflex-container {
+  @apply justify-start items-stretch flex relative h-full w-full;
+  align-content: stretch;
+  direction: ltr;
+}
+
+[dir="rtl"] .reflex-container .reflex-element {
+  direction: rtl;
+}
+
+.reflex-container.horizontal {
+  @apply flex-col;
+  min-height: 1px;
+}
+
+.reflex-container.vertical {
+  @apply flex-row;
+  min-width: 1px;
+}
+
+.reflex-container > .reflex-element {
+  @apply relative overflow-auto;
+  /* height: 100%;
+  width: 100%; */
+}
+
+.reflex-container.reflex-resizing > .reflex-element {
+  @apply select-none pointer-events-none;
+}
+
+.reflex-container > .reflex-element > .reflex-size-aware {
+  @apply w-full h-full;
+}
+
+.reflex-container > .reflex-splitter {
+  @apply bg-card-bg;
+  z-index: 100;
+}
+
+.reflex-container > .reflex-splitter.active,
+.reflex-container > .reflex-splitter:hover {
+  @apply bg-table-zebra-light transition;
+}
+
+.horizontal > .reflex-splitter {
+  @apply cursor-row-resize w-full ~"h-2.5" relative;
+}
+
+.horizontal > .reflex-splitter::after {
+  @apply absolute left-1/2 transform -translate-x-1/2 ~"top-0.5" ~"bottom-0.5" ~"w-2.5";
+
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    var(--reflex-splitter-handle-color) 20%,
+    transparent 21%,
+    transparent 41%,
+    var(--reflex-splitter-handle-color) 42%,
+    var(--reflex-splitter-handle-color) 62%,
+    transparent 63%,
+    transparent 83%,
+    var(--reflex-splitter-handle-color) 83%
+  );
+}
+
+.reflex-element.horizontal .reflex-handle {
+  @apply cursor-row-resize select-none;
+}
+
+.reflex-container.vertical > .reflex-splitter {
+  @apply cursor-col-resize relative;
+  /* height: 100%; */
+  width: 10px;
+}
+
+.reflex-container.vertical > .reflex-splitter::after {
+  @apply absolute top-1/2 ~"left-0.5" ~"right-0.5" transform -translate-y-1/2 ~"h-2.5";
+  content: "";
+  background: linear-gradient(
+    to right,
+    var(--reflex-splitter-handle-color) 20%,
+    transparent 21%,
+    transparent 41%,
+    var(--reflex-splitter-handle-color) 42%,
+    var(--reflex-splitter-handle-color) 62%,
+    transparent 63%,
+    transparent 83%,
+    var(--reflex-splitter-handle-color) 83%
+  );
+}
+
+.reflex-element.vertical .reflex-handle {
+  @apply cursor-col-resize select-none;
+}
+
+.reflex-container > .reflex-splitter.reflex-thin {
+  @apply box-border bg-clip-padding opacity-20;
+  z-index: 100;
+}
+
+.reflex-container > .reflex-splitter.reflex-thin.active .reflex-container > .reflex-splitter.reflex-thin:hover {
+  transition: all 1.5s ease;
+  @apply opacity-50;
+}
+
+.reflex-container.horizontal > .reflex-splitter.reflex-thin {
+  @apply cursor-row-resize w-full;
+  border-bottom: 8px solid rgba(255, 255, 255, 0);
+  border-top: 8px solid rgba(255, 255, 255, 0);
+  height: 17px !important;
+  margin: -8px 0;
+}
+
+.reflex-container.horizontal > .reflex-splitter.reflex-thin.active,
+.reflex-container.horizontal > .reflex-splitter.reflex-thin:hover {
+  border-bottom: 8px solid #e4e4e4;
+  border-top: 8px solid #e4e4e4;
+}
+
+.reflex-container.vertical > .reflex-splitter.reflex-thin {
+  border-right: 8px solid rgba(255, 255, 255, 0);
+  border-left: 8px solid rgba(255, 255, 255, 0);
+  width: 17px !important;
+  cursor: col-resize;
+  margin: 0 -8px;
+  height: 100%;
+}
+
+.reflex-container.vertical > .reflex-splitter.reflex-thin.active,
+.reflex-container.vertical > .reflex-splitter.reflex-thin:hover {
+  border-right: 8px solid #e4e4e4;
+  border-left: 8px solid #e4e4e4;
+}

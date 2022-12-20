@@ -1,0 +1,78 @@
+.sbt-progress-bar {
+  &.ant-progress {
+    .ant-progress-inner {
+      @apply overflow-visible rounded-sm;
+
+      .ant-progress-bg {
+        @apply ~"!rounded-sm" transition-sbt;
+      }
+    }
+
+    .ant-progress-circle {
+      @apply overflow-visible;
+
+      .ant-progress-circle-path {
+        @apply transition-sbt-important;
+      }
+    }
+
+    &.sbt-progress-ltr {
+      .ant-progress-circle-path {
+        @apply -scale-x-100 translate-x-full;
+      }
+    }
+
+    .ant-progress-text {
+      @apply text-sm text-light;
+    }
+  }
+
+  &.sbt-progress-success {
+    .ant-progress-bg {
+      @apply bg-success shadow-progress shadow-success;
+    }
+    .ant-progress-circle-path {
+      @apply ~"drop-shadow-[0_0_10px_theme('colors.success.DEFAULT')]";
+    }
+  }
+  &.sbt-progress-primary {
+    .ant-progress-bg {
+      @apply bg-primary shadow-progress shadow-primary;
+    }
+    .ant-progress-circle-path {
+      @apply ~"drop-shadow-[0_0_10px_theme('colors.primary.DEFAULT')]";
+    }
+  }
+  &.sbt-progress-terminate {
+    .ant-progress-bg {
+      @apply bg-terminate shadow-progress shadow-terminate;
+    }
+    .ant-progress-circle-path {
+      @apply ~"drop-shadow-[0_0_10px_theme('colors.terminate.DEFAULT')]";
+    }
+  }
+  &.sbt-progress-prompt {
+    .ant-progress-bg {
+      @apply bg-prompt shadow-progress shadow-prompt;
+    }
+    .ant-progress-circle-path {
+      @apply ~"drop-shadow-[0_0_10px_theme('colors.prompt.DEFAULT')]";
+    }
+  }
+  &.sbt-progress-error {
+    .ant-progress-bg {
+      @apply bg-error shadow-progress shadow-error;
+    }
+    .ant-progress-circle-path {
+      @apply ~"drop-shadow-[0_0_10px_theme('colors.error.DEFAULT')]";
+    }
+  }
+  &.sbt-progress-warning {
+    .ant-progress-bg {
+      @apply bg-warning shadow-progress shadow-warning;
+    }
+    .ant-progress-circle-path {
+      @apply ~"drop-shadow-[0_0_10px_theme('colors.warning.DEFAULT')]";
+    }
+  }
+}

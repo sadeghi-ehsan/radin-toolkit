@@ -1,0 +1,168 @@
+.stepper1 {
+  /**
+   * **************************** vertical *****************************
+   */
+  .ant-steps.ant-steps-vertical.ant-steps-rtl {
+    height: 100%;
+
+    .ant-steps-item-icon {
+      /* width: 71px;
+      @apply sm xs:w-14; */
+      @apply w-fit;
+    }
+
+    /**
+    * when has icon
+    */
+    & > .ant-steps-item.has-icon > .ant-steps-item-container > .ant-steps-item-tail {
+      @apply ~"left-1.5" ~"md:left-1.5" ~"top-3.5" ~"md:top-4.5" right-auto;
+      padding: 8px 0 6px;
+    }
+
+    /**
+    * when hasn't icon
+    */
+    & > .ant-steps-item:not(.has-icon) > .ant-steps-item-container > .ant-steps-item-tail {
+      @apply ~"left-1.5" ~"md:left-1.5" ~"top-2.5" right-auto;
+      padding: 8px 0 6px;
+    }
+
+    & > .ant-steps-item {
+      &.has-icon .ant-steps-item-icon {
+        @apply float-left ml-0 mr-4 mt-0;
+      }
+      &:not(.has-icon) .ant-steps-item-icon {
+        @apply float-left ml-0 ~"mr-0.5" mt-1;
+      }
+
+      .ant-steps-item-title {
+        line-height: 16px;
+        @apply ~"text-1.5xs" ~"md:text-sm" font-medium ~"mb-0.5" ~"pl-0.5";
+      }
+
+      .ant-steps-item-description {
+        @apply ~"text-.9xs" ~"md:text-xs" font-light ~"pl-0.5";
+      }
+    }
+  }
+
+  /**
+   * **************************** Horizontal ****************************
+   */
+  .ant-steps.ant-steps-horizontal.ant-steps-rtl {
+    .ant-steps-item {
+      @apply w-0 text-center ~"last:!flex-1";
+
+      &:first-child {
+        .ant-steps-item-container .ant-steps-item-content {
+          @apply self-start;
+        }
+      }
+
+      &:last-child {
+        .ant-steps-item-container .ant-steps-item-content {
+          @apply self-end;
+        }
+      }
+
+      .ant-steps-item-container {
+        @apply flex flex-col items-center;
+      }
+
+      .ant-steps-item-content {
+        @apply w-max m-0 mt-3 ~"md:mt-5";
+
+        .ant-steps-item-title {
+          @apply text-xs ~"md:text-sm" font-medium;
+        }
+        .ant-steps-item-description {
+          @apply ~"text-.9xs" ~"md:text-xs";
+        }
+      }
+    }
+
+    /**
+    * when has icon
+    */
+    & > .ant-steps-item.has-icon > .ant-steps-item-container > .ant-steps-item-tail {
+      top: 3rem;
+
+      @media (min-width: 768px) {
+        top: 3.95rem;
+      }
+
+      padding: 0 4px 0 11px;
+      right: 50%;
+    }
+
+    /**
+    * when hasn't icon
+    */
+    & > .ant-steps-item:not(.has-icon) > .ant-steps-item-container > .ant-steps-item-tail {
+      top: 0.4rem;
+
+      padding: 0 4px 0 11px;
+      right: 50%;
+    }
+
+    .ant-steps-item:not(.ant-steps-item-active) {
+      .ant-steps-item-content {
+        display: none;
+      }
+    }
+  }
+
+  /**
+  * **************************** Both vertical and horizontal ****************************
+  * just text colors
+  */
+  .ant-steps.ant-steps-rtl {
+    & > .ant-steps-item {
+      .ant-steps-item-title {
+        @apply text-primary-label;
+      }
+
+      .ant-steps-item-description {
+        @apply text-light-text;
+      }
+    }
+
+    .ant-steps-item-tail::after {
+      @apply bg-disabled  bg-opacity-50;
+    }
+
+    .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+      @apply bg-primary;
+    }
+    .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content {
+      & > .ant-steps-item-title,
+      & > .ant-steps-item-description {
+        @apply text-idle;
+      }
+    }
+
+    .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content {
+      & > .ant-steps-item-title,
+      & > .ant-steps-item-description {
+        @apply text-idle;
+      }
+    }
+
+    .ant-steps-item-disabled:not(.ant-steps-item-active) > .ant-steps-item-container > .ant-steps-item-content {
+      & > .ant-steps-item-title,
+      & > .ant-steps-item-description {
+        @apply text-disabled;
+      }
+    }
+    .ant-steps-next-error {
+      > .ant-steps-item-container > .ant-steps-item-tail::after {
+        @apply bg-necessary;
+      }
+    }
+    .ant-steps-item-error {
+      .ant-steps-item-icon > .ant-steps-icon {
+        @apply text-necessary;
+      }
+    }
+  }
+}

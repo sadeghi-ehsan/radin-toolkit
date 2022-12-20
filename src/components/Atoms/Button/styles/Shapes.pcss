@@ -1,0 +1,35 @@
+.sbt-btn {
+  /*********************************************************************
+      ************** Implementing Different shapes of button ***************
+      *********************************************************************/
+
+  &:not([class*="sbt-shape"]) {
+    @apply rounded-xxl;
+
+    &.sbt-size-sm {
+      @apply rounded-llg;
+    }
+
+    &.sbt-size-md {
+      @apply rounded-xl;
+    }
+  }
+
+  &.sbt-shape {
+    &-round {
+      @apply rounded-full;
+    }
+
+    &-circle {
+      @apply rounded-half;
+    }
+
+    &-toggle {
+      @apply rounded;
+    }
+
+    &-default {
+      @apply rounded-xl;
+    }
+  }
+}

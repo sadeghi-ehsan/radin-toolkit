@@ -1,0 +1,29 @@
+<!-- Badge.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Atoms/Radio/Docs" />
+
+
+
+### توضیحات :
+- به جز name بقیه پراپس ها اختیاری میباشد
+- اندازه پیشفرض lg میباشد
+
+### props ها و قابلیت ها:
+
+- **name**: تمام radioهای یکسان باید name یکسان داشته باشند.
+- **value**: مقداری که هنگام انتخاب radio در تابع onChange برمیگردد.
+- **size**: یکی از مقادیر sm | md | lg | xl میتواند بگیرد.
+- **color**: یکی از مقادیر primary | error | success میتواند بگیرد.
+- **selected**: مشخص می‌کند که آیا این radio در حالت انتخاب شده باشد یا خیر.
+- مقدار این props می‌تواند boolean یا تابعی که boolean برمیگرداند باشد.
+- **variant**: مشخص میکند که شکل آیکون چگونه باشد. مقادیر زیر را میگیرد: 
+  - circleFill | check | fill | times
+
+- **block**: با ست کردن مقدار true، کامپوننت radio کل خط را اشغال می‌کند.
+- **disabled**: با ست کردن مقدار true، کامپوننت radio دیگر قابل انتخاب نمی‌باشد.
+- **onChange?: (value: any, checked: boolean, name: string) => void**: تابعی که هنگام تغییر وضعیت انتخاب بودن یا نبودن radio صدا زده می‌شود.
+
+
+### To do :

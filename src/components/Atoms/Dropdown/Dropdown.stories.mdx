@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Atoms/Dropdown/Docs" />
+
+### شماره تسک در جیرا:
+
+### توضیحات:
+
+
+کامپوننت **Dropdown** شامل **سه** کامپوننت است:
+
+- **Dropdown** : جهت نمایش دراپ داون استفاده میشود. (این کامپوننت از کامپوننت ant design dropdown ارث بری میکند)
+- **Dropdown.Menu** : میتوان از آن به عنوان wrapper برای نمایش تعدادی منوی افقی در درون آن استفاده شود.
+- **Dropdown.MenuItem**: برای نمایش آیتم های منو استفاده میشود.
+
+که از Dropdown به عنوان کامپوننت اصلی و از دو کامپوننت دیگر عمدتا در درون همین کامپوننت استفاده میشود ولی در قسمت های دیگر پروژه هم میتوان استفاده نمود. 
+
+### props ها و قابلیت ها:
+
+- تمامی پراپ های ant design dropdown را میتوان استفاده نمود. 
+
+- **variant**: جهت نمایش border یا عدم آن استفاد ه میشود. دو مقدار زیر را میتواند بگیرد:
+  - "none" | "bordered"
+  
+- **placement**: تعیین میکند دراپ داون در کجای toggler نمایش داده شود:
+- "topLeft" | "topCenter" | "topRight" | "bottomLeft" | "bottomCenter" | "bottomRight"
+
+
+
+### props ها و قابلیت های **Dropdown.Menu**:
+
+- **align**: تعیین میکند آیتم های منو در کدام سمت alignشوند که مقادیر زیر را میگیرد:
+
+  - "**left**" | "**right**" | "**center**"
+

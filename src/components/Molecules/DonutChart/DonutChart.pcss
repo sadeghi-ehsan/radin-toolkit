@@ -1,0 +1,32 @@
+.sbt-chartTitle {
+  @apply font-sans flex flex-row-reverse justify-center items-center w-30 h-30 rounded-full text-light-text bg-white/[.1] font-extrabold ~"text-1.4xl";
+
+  span {
+    @apply rounded px-1 bg-success text-sm ~"h-4.5" bg-light-text/[.2] ml-1;
+  }
+}
+
+.sbt-donut-hoveredValue {
+  @apply font-sans flex flex-col justify-center items-center rounded-full w-30 h-30 text-light-text bg-white/[.1];
+
+  span {
+    @apply mr-1;
+  }
+
+  div {
+    @apply first:flex flex-row-reverse justify-center items-center;
+    @apply last:text-description ~"text-1.5xs";
+
+    div {
+      @apply first:font-bold text-lg;
+    }
+  }
+}
+
+.sbt-arrowUp {
+  @apply w-0 h-0 border-b-6 border-b-success border-x-6 border-x-transparent;
+}
+
+.sbt-arrowDown {
+  @apply w-0 h-0 border-t-6 border-t-prompt border-x-6 border-x-transparent;
+}

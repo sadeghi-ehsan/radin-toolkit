@@ -1,0 +1,10 @@
+dist
+lib
+es
+node_modules
+coverage
+storybook-static
+src/components/**/*.mdx
+webpack-bundle-analyzer-stats.json
+.gitlab-ci.yml
+*.lottiefile.json

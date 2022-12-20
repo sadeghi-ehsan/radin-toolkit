@@ -1,0 +1,35 @@
+.sbt-btn {
+  /*********************************************************************
+        ********************* General Styles of button ***********************
+        *********************************************************************/
+
+  @apply flex justify-between items-center border-2 border-solid border-transparent bg-light-text text-light-text h-auto cursor-pointer
+    font-bold transition-all duration-75 ease-linear text-base
+    hover:text-light-text
+    focus:shadow-none focus:outline-none focus:text-light-text
+    disabled:cursor-default disabled:text-opacity-20;
+
+  * {
+    @apply text-inherit font-bold;
+  }
+
+  &:hover,
+  &:focus,
+  &:disabled {
+    * {
+      @apply text-inherit;
+    }
+  }
+
+  &[ant-click-animating-without-extra-node] {
+    outline: none !important;
+
+    &::after {
+      animation: none !important;
+    }
+  }
+
+  &[class*="loading"]::before {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Atoms/BaseInput/Docs" />
+
+
+### توضیحات:
+
+این کامپوننت اینپوت اصلی سیستم میباشد و یک wrapper هست برروی `<input>` خود html.اگر در جایی نیاز به اینپوت بود باید از این کامپوننت استفاده گردد. این کامپوننت در مولکول  input مورد استفاده قرار گرفته است..
+
+### props ها و قابلیت ها:
+
+- تمام پرارپتی های HTMLInputElement را میتواند بگیرد
+- **type**: نوع اینپوت شمال:
+    - color, date, datetime-local, email, month, number, password, search, tel, text, time, url, week
+- **name**: اسم اینپوت
+- **align**: چینش اینپوت که مقادیر زیر را میگیرد
+    - right
+    - center
+    - left
+- **disabled**: جهت غیرفعال کردن اینپوت
+- **fontSize**: سایز فونت اینپوت که باید از مقادیر TailwindFontSize به آن داد.

@@ -1,0 +1,40 @@
+<!-- InputCascading.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Molecules/InputCascading/Docs" />
+
+
+### شماره تسک در جیرا:
+
+### توضیحات :
+
+کامپوننت InputCascading به طور مستقیم از کامپوننت input ارث بری میکند. جهت مشاهده کامپوننت input میتوانید به داکیومنت آن مراجعه کنید. با این تفاوت که این کامپوننت دو ورودی و دو خروجی  دارد. این دو ورودی یکی برای input میباشد که کاربر تایپ میکند و دیگری برای مقداری است که در dropDownموجود در این کامپوننت انتخاب میکند.
+
+
+فرمت initialValue  و مقداری که در onchange برگردانده میشود به شرح زیر است:
+
+```json
+ {
+        "value": 10000,
+        "selectedOption": "toman"
+ }
+```
+
+### props ها و قابلیت ها:
+
+- **options** آپشن هایی که در dropDown نمایش داده میشوند. این پراپ اجباریست و فرمت آن به شرح زیر است:
+```json
+ [
+    {
+        "label": "ریال",
+        "value": "rial"
+    },
+    {
+        "label": "تومان",
+        "value": "toman"
+    }
+]
+```
+
+

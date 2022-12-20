@@ -1,0 +1,50 @@
+<!-- Icon.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="general/Icons/Docs" />
+
+
+### شماره تسک در جیرا:
+
+### توضیحات :
+
+آیکون های جامعی که ممکن است در پروژه ها استفاده شود و یا در کامپوننت های radin-toolkit استفاده شده است در این کامپوننت قرار میگیرد
+
+
+برای این کار یک اسکریپت نوشته شده است که از پوشه assets/icons لیست آیکون های svg را خوانده و فایل هر آیکون را در پوشه src/components/Icon/icons میسازد و آدرس فایل را در index.ts  اضافه میکند
+
+برای اضافه کردن آیکون فقط کافی است آیکون را در پوشه assets/icons اضافه کنید(نام آیکون را با دقت و مفهومی و  به صورت kebab case بنویسید ) و در آخر دستور yarn assemble-icon را اجرا کنید.
+
+
+### قوانین نام آیکون:
+
+در ابتدای نام، هر اسم دلخواهی که مربوط به محتوای آيکون می‌باشد بنویسید. سپس اگر آن آیکون، حالت regular یا همان پیش فرض می‌باشد، نیازی نیست در ادامه نام فایل چیزی بنویسید.
+
+ولی اگر یکی از حالت‌های thin, light, regular, bold, fill, duotone را دارد، ابتدا یک - بگذارید سپس نام حالت را در ادامه بنویسید.
+
+## مثال:
+    - activity.svg
+    - activity-thin.svg
+    - activity-light.svg
+    - activity-fill.svg
+    - activity-duotone.svg
+    - activity-bold.svg
+
+
+### props ها و قابلیت ها:
+
+- **color?** TailwindTextColors
+    - رنگ stroke/fill آیکون را مشخص میکند
+- **size?** TailwindFontSize
+    - میزان بزرگی آیکون را تنظیم می‌کند
+- **weight?** IconWeight
+    - وزن آیکون را مشخص می‌کند
+- **flip?** "vertical" | "horizontal"
+    - آیکون را نسبت به محور عمودی یا افقی می‌چرخاند
+- **rotate?** TailwindRotateClasses
+    - آیکون را به صورت دایره با زاویه‌های مختلف می‌چرخاند
+- **animate?** TailwindAnimation
+    - حرکت‌های مختلف به صورت انیمیشن به آیکون اضافه می‌کند
+
+

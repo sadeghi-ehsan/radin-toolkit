@@ -1,0 +1,37 @@
+.sbt-linechart-tooltip {
+  @apply shadow-tooltip bg-main-bg border border-primary-border font-sans opacity-90 w-fit text-light-text backdrop-blur p-2 rounded-lg;
+}
+
+.sbt-lineChart {
+  .highcharts-yaxis-labels {
+    text {
+      @apply !text-light-text !fill-light-text font-sans text-xs;
+    }
+
+    .badge {
+      @apply rounded text-xs text-primary bg-primary-shadow ~"pt-0.5" pb-0 ~"px-0.75" ~"ml-1.5";
+    }
+  }
+
+  .highcharts-xaxis-labels {
+    text {
+      @apply !text-light-text !fill-light-text font-sans text-xs;
+    }
+  }
+
+  .highcharts-container {
+    @apply max-w-full;
+  }
+
+  .highcharts-legend {
+    .highcharts-legend-item {
+      text {
+        font-family: "yekan-bakh";
+
+        &:hover {
+          @apply !text-idle !fill-idle;
+        }
+      }
+    }
+  }
+}

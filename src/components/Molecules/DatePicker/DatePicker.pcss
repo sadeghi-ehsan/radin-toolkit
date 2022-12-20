@@ -1,0 +1,239 @@
+.sbt-calendar-popup {
+  @apply ~"!bg-card-bg" relative !border-none !rounded-xl !shadow-none select-none;
+
+  /* --------------------------------- Header --------------------------------- */
+  /* only RTL */
+  .rmdp-calendar.rmdp-rtl .rmdp-header .rmdp-header-values {
+    :nth-child(2) {
+      @apply mr-4 relative;
+
+      &:after {
+        @apply content-[''] bg-primary w-px h-3 absolute -right-2 top-1.5;
+      }
+    }
+  }
+
+  /* only NOT RTL */
+  .rmdp-calendar:not(.rmdp-rtl) .rmdp-header .rmdp-header-values {
+    :nth-child(2) {
+      @apply ml-4 relative;
+
+      &:before {
+        @apply content-[''] bg-primary w-px h-3 absolute -left-2 top-1.5;
+      }
+    }
+  }
+
+  /* Both RTL & not rtl */
+  .rmdp-calendar .rmdp-header {
+    & > div {
+      @apply items-center;
+    }
+    .rmdp-header-values {
+      @apply md:text-base text-primary-label font-medium ~"!my-0";
+
+      span:hover {
+        @apply text-primary;
+      }
+    }
+  }
+  /* ------------------------------- END Header ------------------------------- */
+
+  /* ------------------------------- Day Picker ------------------------------- */
+  .rmdp-day-picker {
+    @apply pt-0 px-1 ~"min-h-[250px]";
+
+    .rmdp-week {
+      /* top Week Title bar */
+      &:first-child {
+        @apply relative ~"h-[34px]" flex items-center mb-2;
+
+        &:before {
+          @apply bg-dark-text bg-opacity-20 top-0 ~"-right-[9px]" ~"-left-[9px]" bottom-0 absolute content-[''];
+        }
+
+        .rmdp-week-day {
+          @apply text-idle font-normal text-xs;
+        }
+      }
+
+      /* Days */
+      .rmdp-day {
+        @apply text-light-text font-medium text-sm ~"mx-0.5";
+
+        &.rmdp-deactive .sd {
+          @apply text-disabled;
+        }
+        &.rmdp-today .sd {
+          @apply bg-warning bg-opacity-30 text-warning rounded-md shadow-none;
+        }
+        &.rmdp-selected .sd {
+          @apply bg-primary text-light-text rounded-md shadow-none !bg-opacity-100 hover:bg-opacity-95;
+        }
+        &:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+          @apply bg-primary bg-opacity-10 text-light-text rounded-md shadow-none;
+        }
+        /* &.rmdp-range {
+          @apply bg-primary bg-opacity-20 text-primary shadow-none rounded-none;
+
+          &:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+            @apply bg-transparent;
+          }
+
+          &.start {
+            @apply rounded-md bg-primary text-light-text shadow-none hover:bg-opacity-95;
+            &:before {
+              @apply content-[''] bg-primary bg-opacity-20 left-0 right-1/2 top-0 bottom-0 absolute -z-10;
+            }
+          }
+          &.end {
+            @apply rounded-md bg-primary text-light-text shadow-none hover:bg-opacity-95;
+            &:before {
+              @apply content-[''] bg-primary bg-opacity-20 left-1/2 right-0 top-0 bottom-0 absolute -z-10;
+            }
+          }
+        } */
+        &.rmdp-range {
+          @apply bg-transparent shadow-none border-none relative;
+
+          &:before {
+            @apply absolute block ~"-left-0.5" ~"-right-0.5" ~"top-0.5" ~"bottom-0.5" bg-primary bg-opacity-25 content-[''];
+          }
+
+          &.rmdp-today:not(.start):not(.rmdp-range) {
+            .sd {
+              @apply text-warning;
+            }
+
+            &:before {
+              @apply hidden;
+            }
+          }
+
+          .sd {
+            @apply text-primary;
+          }
+
+          &.start,
+          &.end {
+            .sd {
+              @apply bg-primary bg-opacity-100 text-light-text rounded-md;
+            }
+          }
+
+          &.end {
+            &:before {
+              @apply rounded-l-md ~"left-0.5";
+            }
+          }
+
+          &.start {
+            &:before {
+              @apply rounded-r-md  ~"right-0.5";
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ----------------------------- END Day Picker ----------------------------- */
+
+  /* --------------------------- Year & month Picker -------------------------- */
+  .rmdp-year-picker,
+  .rmdp-month-picker {
+    @apply bg-card-bg border border-primary-border rounded-xl  shadow-lg;
+
+    .rmdp-ym .rmdp-day {
+      &.rmdp-today {
+        span {
+          @apply bg-warning bg-opacity-30 text-warning rounded-md shadow-none;
+        }
+      }
+
+      span {
+        @apply text-light-text rounded selection:hover:text-primary hover:bg-opacity-10 hover:bg-primary;
+      }
+
+      &.rmdp-selected {
+        span {
+          @apply text-primary bg-opacity-10 bg-primary border-none shadow-none;
+        }
+      }
+    }
+  }
+  /* ------------------------- END Year & month Picker ------------------------ */
+
+  /* ------------------------------- Time Picker ------------------------------ */
+  .rmdp-time-picker {
+    @apply pb-4 pt-2;
+
+    .rmdp-arrow-container {
+      @apply w-3 h-3;
+
+      &:hover {
+        @apply bg-transparent shadow-none;
+      }
+    }
+
+    input {
+      @apply bg-transparent text-light-text text-sm leading-none py-1 w-6;
+    }
+
+    .dvdr {
+      @apply text-idle;
+    }
+  }
+  /* ----------------------------- END Time Picker ---------------------------- */
+}
+
+/* ------------------------------- Border Top ------------------------------- */
+.rmdp-border-top {
+  @apply ~"!border-none" relative;
+
+  &:after {
+    @apply content-[''] border-b  border-card-border absolute top-0 right-4 left-4;
+  }
+}
+
+/* ------------------------------ BorderBottom ------------------------------ */
+
+.rmdp-border-bottom {
+  @apply ~"!border-none" relative;
+
+  &:before {
+    @apply content-[''] border-b  border-card-border absolute bottom-0 right-4 left-4;
+  }
+}
+
+.sbt-input-date-picker {
+  @apply flex flex-row-reverse items-end justify-start h-full;
+
+  .date,
+  .time {
+    @apply flex flex-row-reverse items-end;
+    span {
+      @apply border-b border-card-border ~"mx-1.2" relative text-sm;
+      color: #fafcfb;
+      min-width: 17px;
+    }
+  }
+  .date span {
+    &:before {
+      @apply content-[''] absolute w-px -bottom-px;
+      background: #0a84ff;
+      right: -5px;
+      height: 75%;
+      min-height: 15px;
+    }
+
+    &:last-child:before {
+      @apply hidden;
+    }
+  }
+  .time {
+    color: #0a84ff;
+    span {
+      @apply border-b border-card-border ~"mx-1.2" relative text-sm;
+    }
+  }
+}

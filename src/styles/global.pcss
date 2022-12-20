@@ -1,0 +1,186 @@
+/** transparent auto complete in all inputs **/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+  /* -webkit-text-fill-color: inherit !important; */
+}
+
+/**
+ * hide arrow up/down in Number inputs
+ */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/**
+* Custom tailwind utilities.
+* we want whis classess always include in our compiled css. even if not used anywhere. (we dont want them to purge)
+* so we should not put them in @layer components {}.
+* @link https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom-css
+*/
+/* @layer components { */
+.transition-sbt {
+  @apply transition-all duration-75 ease-linear;
+}
+
+.transition-sbt-important {
+  @apply ~"!transition-all" ~"!duration-75" ~"!ease-linear";
+}
+
+.dir-ltr {
+  direction: ltr;
+}
+
+.dir-ltr-all {
+  &,
+  & * {
+    direction: ltr;
+  }
+}
+
+.dir-rtl {
+  direction: rtl;
+}
+
+.dir-rtl-all {
+  &,
+  & * {
+    direction: rtl;
+  }
+}
+
+.h-unset {
+  height: unset;
+}
+
+// for hiding number input Arrows & etc
+.appearance-none-all {
+  &,
+  & * {
+    appearance: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* } */
+
+/**
+* ::-webkit-scrollbar is available in "Blink" and "WebKit" based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and others).
+* A standardized method of styling scrollbars is available with "scrollbar-color" and "scrollbar-width".
+* @link https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+*/
+.scrollbar-primary,
+.scrollbar-primary-sm {
+  &::-webkit-scrollbar-corner {
+    @apply bg-primary border border-primary;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #0a84ff #2c3358;
+  /* The first applies to the thumb of the scrollbar, the second to the track. */
+
+  /* Track */
+
+  &::-webkit-scrollbar-track {
+    @apply bg-filled-bg rounded-xl;
+  }
+
+  /* Handle */
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-xl;
+  }
+
+  /* Handle on hover */
+
+  &::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-hover;
+  }
+}
+
+.scrollbar-primary {
+  /* width */
+
+  &::-webkit-scrollbar {
+    @apply ~"w-1.5";
+    @apply ~"h-1.5";
+  }
+}
+
+.scrollbar-primary-sm {
+  /* width */
+
+  &::-webkit-scrollbar {
+    @apply w-1;
+    @apply h-1;
+  }
+}
+
+.scrollbar-white,
+.scrollbar-white-sm {
+  &::-webkit-scrollbar-corner {
+    @apply bg-white border border-white;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #2c3358;
+  /* The first applies to the thumb of the scrollbar, the second to the track. */
+
+  /* Track */
+
+  &::-webkit-scrollbar-track {
+    @apply bg-filled-bg rounded-xl;
+  }
+
+  /* Handle */
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-white rounded-xl;
+  }
+
+  /* Handle on hover */
+
+  &::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/50;
+  }
+}
+
+.scrollbar-white {
+  /* width */
+
+  &::-webkit-scrollbar {
+    @apply ~"w-1.5";
+    @apply ~"h-1.5";
+  }
+}
+
+.scrollbar-white-sm {
+  /* width */
+
+  &::-webkit-scrollbar {
+    @apply w-1;
+    @apply h-1;
+  }
+}

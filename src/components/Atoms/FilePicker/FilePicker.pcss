@@ -1,0 +1,21 @@
+.sbt-upload {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-feature-settings: "tnum";
+  outline: 0;
+
+  &.sbt-upload-drag {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+.sbt-upload-drag-hover:not(.sbt-upload-disabled) {
+  @apply border-primary;
+  @apply animate-pulse-fast;
+}
+.sbt-upload-drag-container {
+  height: 100%;
+}

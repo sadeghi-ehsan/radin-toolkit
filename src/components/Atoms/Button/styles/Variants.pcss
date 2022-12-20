@@ -1,0 +1,45 @@
+.sbt-btn {
+  /*********************************************************************
+  ************* Implementing Different variants of button **************
+  *********************************************************************/
+
+  &.sbt-variant {
+    &-default {
+      @apply hover:border-transparent focus:border-light-text disabled:text-opacity-20;
+
+      &.ant-btn-loading {
+        &::before {
+          top: -2px;
+          right: -2px;
+          bottom: -2px;
+          left: -2px;
+        }
+      }
+    }
+
+    &-outline {
+      @apply bg-transparent hover:bg-opacity-40 focus:border-transparent
+            disabled:bg-transparent disabled:border-opacity-20;
+    }
+
+    &-text {
+      @apply bg-transparent border-none hover:bg-transparent focus:bg-transparent
+      disabled:bg-transparent disabled:text-light-text disabled:text-opacity-20 !shadow-none;
+
+      &::before {
+        @apply bg-transparent;
+      }
+
+      &:disabled {
+        @apply hover:bg-transparent hover:text-light-text hover:text-opacity-20;
+      }
+    }
+
+    &-toggle {
+      @apply border-none  duration-75;
+    }
+    &-unToggle {
+      @apply border-none  duration-75;
+    }
+  }
+}

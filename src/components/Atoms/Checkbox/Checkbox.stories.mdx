@@ -1,0 +1,28 @@
+<!-- Checkbox.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Atoms/Checkbox/Docs" />
+
+### شماره تسک در جیرا:
+
+
+
+### props ها و قابلیت ها:
+
+- **name** تمام checkboxهای یکسان باید name یکسان داشته باشند
+- **value** مقداری که هنگام انتخاب checkbox در تابع onChange برمیگردد
+- **size** xs | sm | base
+- **color** primary | error | success
+- **selected** مشخص می‌کند که آیا این checkbox در حالت انتخاب شده باشد یا خیر
+- مقدار این props می‌تواند boolean یا تابعی که boolean برمیگرداند باشد
+- **variant** check | fill | times
+- **block** با ست کردن مقدار true، کامپوننت checkbox کل خط را اشغال می‌کند
+- **disabled** با ست کردن مقدار true، کامپوننت checkbox دیگر قابل انتخاب نمی‌باشد
+- **void**
+onChange?: (value: any, checked: boolean, name: string) => void -
+تابعی که هنگام تغییر وضعیت انتخاب بودن یا نبودن checkbox صدا زده می‌شود
+- **readOnly** اگر مقدار این خصیصه برابر با true باشد امکان کلیک بر روی این المنت غیر فعال میشود و فقط امکان نمایش دارد.
+
+
+

@@ -1,0 +1,43 @@
+.sbt-multi-select-popup {
+  .sbt-multi-select-popup-selected {
+    @apply flex flex-row space-x-2 space-x-reverse mb-4 overflow-x-auto text-light;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+
+    &:after {
+      @apply absolute left-0 top-0 bottom-0 w-9 bg-gradient-to-r from-card-bg content-[''];
+    }
+  }
+
+  .sbt-multi-select-popup-parent {
+    @apply ml-2 flex rounded p-2 text-idle cursor-pointer hover:bg-primary/10 hover:text-primary transition-colors duration-300;
+  }
+
+  .sbt-multi-select-popup-child {
+    @apply ml-2 flex cursor-pointer rounded p-2 pr-6 hover:bg-primary/10 hover:text-primary transition-colors duration-300;
+  }
+
+  .rc-virtual-list-holder {
+    @apply ml-3;
+  }
+  .rc-virtual-list-scrollbar.rc-virtual-list-scrollbar-show {
+    right: unset !important;
+    @apply !bg-filled-bg !rounded-xl !block !left-0;
+
+    .rc-virtual-list-scrollbar-thumb {
+      @apply !bg-primary !rounded-xl;
+    }
+
+    .rc-virtual-list-scrollbar-thumb:hover {
+      @apply !bg-primary-hover;
+    }
+  }
+}
+.sbt-multi-select-popup-parent-select {
+  @apply text-center p-1 w-28 truncate h-8 leading-8 cursor-pointer rounded;
+}

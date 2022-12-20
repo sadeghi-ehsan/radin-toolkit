@@ -1,0 +1,25 @@
+<!-- InputMultipleInputs.stories.mdx -->
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="COMPONENTS/Molecules/InputMultipleInputs/Docs" />
+
+
+### شماره تسک در جیرا:
+
+### توضیحات:
+
+کامپوننت InputMultipleInputs جهت نمایش چندین اینپوت در کنار هم و همگی به عنوان یک اینپوت واحد استفاده میشود. این کامپوننت متشکل شده از n عدد input در کنار هم میباشد که برای این منظور از n عدد BaseInput استفاده شده است که همگی در نهایت در درون کامپوننت FormElementWrapper به عنوان children قرار گرفته اند. مقدار n و همچنین ساختار آن توسط پراپ schema تعیین میگردد.
+
+### props ها و قابلیت ها:
+
+- پراپ ها مشابه کامپوننت Input میباشند.
+- **schema** جهت تعیین ساختار و تعداد اینپوت ها استفاده میشود و ساختار آن به شرح زیر است:
+```json
+ [
+  { "name": "address", "type": "text", "placeholder": "آدرس", "rootClassName": "basis-full" },
+  { "name": "no", "type": "text", "placeholder": "پلاک", "rootClassName": "basis-1/4" },
+  { "name": "floor", "type": "text", "placeholder": "طبقه", "rootClassName": "basis-1/4" },
+  { "name": "unit", "type": "text", "placeholder": "واحد", "rootClassName": "basis-1/4" }
+]
+```

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -e
+
+# Clean up
+rm -rf dist
+rm -rf lib
+rm -rf es
+rm -rf storybook-static
+rm -rf webpack-bundle-analyzer-stats.json
+
+echo "Building tailwind Types ..."
+yarn tailwind-build
+
+# Bundle
+echo "Building styles with postcss ..."
+lessc src/styles/index.pcss lib/styles.css --js
+cp -r "./src/styles/fonts" ./lib/fonts
+postcss lib/styles.css --replace -m --env production
+cp -r "./tailwind.config.js" ./lib
+mkdir ./lib/tailwind && cp -r "./src/styles/global.pcss" ./lib/tailwind/
+
+# Compile
+echo "Compiling with babel ..."
+npx cross-env BABEL_MODULE=commonjs babel src --out-dir lib --extensions ".js,.ts,.jsx,.tsx" --ignore "**/*.test.tsx" --ignore "**/*.stories.tsx"
+
+## commented because we don't need to compile es
+# npx cross-env BABEL_MODULE=module babel src --out-dir es --extensions ".js,.ts,.jsx,.tsx" --ignore "**/*.test.tsx" --ignore "**/*.stories.tsx"
+
+# Type check
+echo "Check types with tsc ..."
+npx tsc --project tsconfig.build.json
+
+cp -r "./src/components/Molecules/Table/loading.lottiefile.json" ./lib/components/Molecules/Table
+
+# Storybook
+yarn build-storybook

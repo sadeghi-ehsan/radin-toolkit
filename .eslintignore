@@ -1,0 +1,18 @@
+src/components/**/**/*.stories.tsx
+src/components/**/**/*.stories.mdx
+!.*.js
+~*
+# Docs templates
+lib/**/*
+es
+dist
+node_modules
+playground
+coverage
+storybook-static
+webpack-bundle-analyzer-stats.json
+src/utils/modules/spaces/index.ts
+src/utils/modules/text/index.ts
+src/utils/modules/numbers/index.ts
+
+

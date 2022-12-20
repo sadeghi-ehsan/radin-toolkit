@@ -1,0 +1,115 @@
+/* variant: line */
+.line-fieldset {
+  &:focus-within {
+    & > .underline-section {
+      @apply shadow-input;
+    }
+  }
+
+  &:not(.important-fieldset, .required-fieldset, .error-fieldset) {
+    &:hover {
+      & > .underline-section {
+        @apply border-primary;
+      }
+    }
+
+    &:focus-within {
+      & > .underline-section {
+        @apply border-primary shadow-primary;
+      }
+    }
+  }
+
+  &.important-fieldset {
+    &:hover {
+      & > .underline-section {
+        @apply border-primary;
+      }
+    }
+    &:focus-within {
+      & > .underline-section {
+        @apply border-primary shadow-primary;
+      }
+    }
+  }
+
+  &.required-fieldset {
+    &:hover {
+      & > .underline-section {
+        @apply border-primary;
+      }
+    }
+    &:focus-within {
+      & > .underline-section {
+        @apply border-primary shadow-primary;
+      }
+    }
+  }
+
+  &.error-fieldset {
+    &:hover {
+      & > .underline-section {
+        @apply border-error;
+      }
+    }
+    &:focus-within {
+      & > .underline-section {
+        @apply border-primary shadow-primary;
+      }
+    }
+  }
+}
+
+/* variant: fill */
+.fill-fieldset {
+  & > legend {
+    max-width: calc(100% - 2rem);
+  }
+
+  &:not(.important-fieldset, .required-fieldset) {
+    &:focus-within .fill-legend {
+      @apply border-primary;
+    }
+  }
+
+  &.important-fieldset {
+    &:focus-within .fill-legend {
+      @apply border-warning;
+    }
+  }
+
+  &.required-fieldset {
+    &:focus-within .fill-legend {
+      @apply border-necessary;
+    }
+  }
+
+  &.error-fieldset {
+    &:not(:focus-within):hover {
+      @apply border-error;
+    }
+  }
+}
+
+/* variant outline */
+.outline-fieldset {
+  & > legend {
+    max-width: calc(100% - 2rem);
+  }
+  &.error-fieldset {
+    &:not(:focus-within):hover {
+      @apply border-error;
+    }
+  }
+}
+
+.clear-icon {
+  @apply shadow-clear-icon;
+}
+
+/* adornments */
+.clear-icon {
+  &:not(.clear-icon-disabled):hover svg {
+    @apply text-light-text;
+  }
+}
