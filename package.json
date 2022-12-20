@@ -167,7 +167,7 @@
     "jalaliday": "^2.3.0",
     "lodash.merge": "4.6.2",
     "prop-types": "15.8.1",
-    "radin-icon": "file:../radin-icon",
+    "@sadeghi-ehsan/radin-icon": "0.0.0",
     "rc-virtual-list": "^3.4.8",
     "react-cropper": "2.1.8",
     "react-date-object": "^2.1.5",
